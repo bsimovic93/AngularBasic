@@ -1,0 +1,12 @@
+<form [formGroup] = "userForm">
+	Value: {{userForm.value | json}}
+	<h3>Form</h3>
+	<label for="">Name</label>
+	<input formControlName = "username" type="text" >
+	<br>
+	<label for="">Password</label>
+	<input formControlName = "password" type="password" >
+	<br>
+	<br>
+	<button [disabled] ="userForm.invalid" type="button">Submit</button>
+</form>
